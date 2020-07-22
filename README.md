@@ -12,3 +12,5 @@ node index.js
 The sample object is small and simple — different objects may have different outcomes.
 
 Note: I couldn't get things like Sets or repeated references to work with superjson (it complained about circular references).
+
+![superjson and devalue results](results.png)
