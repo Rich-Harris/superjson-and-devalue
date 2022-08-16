@@ -1,14 +1,10 @@
-const c = require('kleur');
-const superjson = require('superjson');
-const devalue = require('devalue');
+import c from 'kleur';
+import * as superjson from 'superjson';
+import devalue from 'devalue';
 
 const obj = {
 	date: new Date(),
-	array: [
-		{ foo: 1 },
-		{ bar: 2 },
-		{ baz: 3 }
-	],
+	array: [{ foo: 1 }, { bar: 2 }, { baz: 3 }],
 	regex: /the quick brown fox/,
 	number: 42
 };
@@ -16,8 +12,12 @@ const obj = {
 const superjson_serialized = superjson.stringify(obj);
 const devalue_serialized = devalue(obj);
 
-console.log(`superjson output: ${c.bold().cyan(superjson_serialized.length)} bytes`);
-console.log(`devalue output: ${c.bold().cyan(devalue_serialized.length)} bytes`);
+console.log(
+	`superjson output: ${c.bold().cyan(superjson_serialized.length)} bytes`
+);
+console.log(
+	`devalue output: ${c.bold().cyan(devalue_serialized.length)} bytes`
+);
 
 // const superjson_deserialized = superjson.parse(superjson_serialized);
 // const devalue_deserialized = eval(`(${devalue_serialized})`);
@@ -32,7 +32,9 @@ function test(fn, label = fn.toString()) {
 	while (i--) {
 		fn();
 	}
-	console.log(`${iterations} iterations in ${c.bold().cyan(Date.now() - start)}ms`);
+	console.log(
+		`${iterations} iterations in ${c.bold().cyan(Date.now() - start)}ms`
+	);
 }
 
 // serialization
