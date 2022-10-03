@@ -21,10 +21,10 @@ To see how much `superjson.deserialize` adds to the client bundle, run this:
 
 ```
 npm run build
-cat bundled.js | wc -c
+cat bundle-size/output-superjson.js | wc -c
 ```
 
-(With Terser installed globally, you can do `cat bundled.js | terser -cm | wc -c` to check minified size, or chuck a `| gzip -9` in there to see zipped size.)
+(With Terser installed globally, you can do `cat bundle-size/output-superjson.js | terser -cm | wc -c` to check minified size, or chuck a `| gzip -9` in there to see zipped size.)
 
 ## Results
 

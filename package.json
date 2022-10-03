@@ -1,6 +1,7 @@
 {
 	"dependencies": {
-		"devalue": "^2.0.1",
+		"arson": "^0.2.6",
+		"devalue": "^4.0.0",
 		"kleur": "^4.0.2",
 		"superjson": "^1.9.1"
 	},
